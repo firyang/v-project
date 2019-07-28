@@ -1,0 +1,54 @@
+﻿# 安装 vue-cli3
+# 创建项目
+# 配置项目
+  1. eslint 自动格式化代码
+    vscode首选项中配置：  
+    "editor.formatOnSave": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.options": {
+      "extensions": [
+        ".js",
+        ".vue"
+      ]
+    },
+    "eslint.validate": [
+      "javascript",
+      {
+        "language": "vue",
+        "autoFix": true
+      },
+      {
+        "language": "html",
+        "autoFix": true
+      }
+    ]
+# webpack配置
+  根目录新增 vue.config.js
+  module.exports = {
+    // 配置项
+  }
+  详见 vue.config.demo.js
+
+# 配置 router
+  1. npm i -save vue-router
+  2. root/src 创建router.js
+    import Vue from 'vue'
+    import Router from 'vue-router'
+    // 引入组件
+    import Main from './components/Main'
+    Vue.use(Router)
+    export default new Router({
+      routes: [
+        { path: '/', name: 'home', component: 'Main' },
+        ...
+      ]
+    })
+  3. main.js 中引入 router，并挂载
+    import router from './router'
+    new Vue({
+      ... Other code
+      router
+    }).$mount('#app')
+  4. 指定 <router-view/>
+# 配置 axios
+# 配置 vuex
