@@ -39,8 +39,33 @@ const checkDest = function (src, dest, callback) {
   }
 }
 
+const checkDir = function (src, dest, callback) {
+  dest = dest.replace(process.cwd(), '').replace('/', '\\').slice(1)
+  let fromi = 0,
+      i = 0,
+      _dest = ""
+  do {
+    i = dest.indexOf('\\', fromi)
+    if (i === -1) {
+      _dest = dest.slice(0)
+    } else {
+      _dest = dest.slice(0, i)
+    }
+    _dest = path.join(process.cwd(), _dest)
+    if (!fs.existsSync(_dest)) {
+      fs.mkdirSync(_dest)
+    }
+    fromi = i + 1
+  } while (i !== -1)
+
+  if (i === -1) {
+    callback(src, _dest)
+  }
+}
+
 module.exports = {
   copyDir,
   copyFile,
-  checkDest
+  checkDest,
+  checkDir
 }
