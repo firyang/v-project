@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* {
+	box-sizing: border-box;
+}	
+body {
+	margin:0;
+	background: #333;
+}
+.box {
+	display: flex;
+	flex-direction: row; /* row, row-reverse, column, column-reverse */
+	flex-wrap: no-wrap; /* wrap, no-wrap, wrap-reverse */
+	/* flex-flow: [flex-direction] [flex-wrap]; */
+	justify-content: center; /* flex-start, flex-end, center, space-between, space-around */
+	/* align-items: flex-start;  flex-start, flex-end, center, baseline, stretch */
+	/* align-content: stretch;  flex-start, flex-end, center, space-between, space-around, stretch */
+	/*
+	  Items Attribute:
+	  order /顺序
+	  flex-grow /放大比例
+	  flex-shrink /缩小比例
+	  flex-basis /分配多余空间之前，项目占据的主轴空间
+	  flex /flex-grow flex-shrink flex-basis 的简写，默认 0 1 auto，快捷值auto | none (1 1 auto | 0 0 auto)
+	  align-self /定义单个项目的对齐方式
+	*/
+}
+[class$="face"] {
+ margin: 16px;
+ padding: 4px;
+ background:#e7e7e7;
+ width:104px;
+ height:104px;
+ object-fit:contain;
+ box-shadow: inset 0 5px white, inset 0 -5px #ddd, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+ border-radius: 10%;
+}
+.pip {
+	display:block;
+	width:24px;
+	height: 24px;
+	border-radius: 50%;
+	margin: 4px;
+	background-color: #333;
+	box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+.first_face {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.second_face {
+	display: flex;
+	justify-content: space-between;
+}
+.second_face .pip:nth-child(2) {
+ align-self: flex-end;
+}
+.third_face {
+	display: flex;
+	justify-content: space-between;
+}
+.third_face .pip:nth-child(2) {
+ align-self: center;
+}
+.third_face .pip:nth-child(3) {
+ align-self: flex-end;
+}
+.fourth_face, .sixth_face {
+	display: flex;
+	justify-content: space-between;
+}
+.fourth_face .column, .sixth_face .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fifth_face {
+	display: flex;
+	justify-content: space-between;
+}
+.fifth_face .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fifth_face .column:nth-child(2) {
+	align-self: center;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="first_face"><span class="pip"></span></div>
+  <div class="second_face"><span class="pip"></span><span class="pip"></span></div>
+  <div class="third_face"><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+  <div class="fourth_face">
+    <div class="column"><span class="pip"></span><span class="pip"></span></div>
+    <div class="column"><span class="pip"></span><span class="pip"></span></div>
+  </div>
+  <div class="fifth_face">
+    <div class="column"> <span class="pip"></span><span class="pip"></span></div>
+    <div class="column"> <span class="pip"></span></div>
+    <div class="column"> <span class="pip"></span><span class="pip"></span></div>
+  </div>
+  <div class="sixth_face">
+    <div class="column"><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+    <div class="column"><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        .cal {
+            border-collapse: separate;
+            border-spacing: 0.375em;
+            text-align: center;
+            color: #333;
+        }
+
+        .cal th,
+        .cal td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cal caption {
+            font-size: 2.25em;
+            padding-top: 0.692em;
+            padding-bottom: 0.392em;
+            font-weight: bold;
+            color: #006;
+        }
+
+        .cal caption .cl {
+            float: left;
+        }
+
+        .cal caption .cr {
+            float: right;
+        }
+
+        .cal thead th span {
+            display: block;
+            background-color: #333;
+            color: #fff;
+            border-radius: 0.375em;
+            font-size: 0.75em;
+            font-family: Arial;
+            font-weight: normal;
+            padding: 0.275em 0;
+        }
+
+        .cal thead th.sun span {
+            background-color: #006;
+        }
+
+        .cal thead th.sat span {
+            background-color: #FC0;
+        }
+
+        .cal tbody a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 1.585em 2.6em 1.508em 2.6em;
+        }
+
+        .cal tbody a:hover,
+        .cal tbody a:focus,
+        .cal tbody a:active,
+        .cal tbody .selected a:link,
+        .cal tbody .selected a:visited,
+        .cal tbody .selected a:hover,
+        .cal tbody .selected a:focus,
+        .cal tbody .selected a:active {
+            background-color: #006;
+            color: white;
+            text-shadow: 1px 1px 2px #22456b;
+        }
+
+        .null {
+            color: #c0c8d2;
+        }
+
+        #sun,
+        #tue,
+        #thu,
+        #sat {
+            background-color: #FFC;
+        }
+
+        #mon,
+        #wed,
+        #fri {
+            background-color: #ACC7DB;
+        }
+
+        .cal th {
+            background-color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0" class="cal" summary="A calendar style date picker">
+        <caption>
+            <span class="cl">2018</span><span class="cr">三月 March</span>
+        </caption>
+        <colgroup>
+            <col id="sun" />
+            <col id="mon" />
+            <col id="tue" />
+            <col id="wed" />
+            <col id="thu" />
+            <col id="fri" />
+            <col id="sat" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" class="sun"><span>SUN</span></th>
+                <th scope="col"><span>MON</span></th>
+                <th scope="col"><span>TUE</span></th>
+                <th scope="col"><span>WED</span></th>
+                <th scope="col"><span>THU</span></th>
+                <th scope="col"><span>FRI</span></th>
+                <th scope="col" class="sat"><span>SAT</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">4</a></td>
+                <td><a href="#">5</a></td>
+                <td><a href="#">6</a></td>
+                <td><a href="#">7</a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td><a href="#">10</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">11</a></td>
+                <td><a href="#">12</a></td>
+                <td><a href="#">13</a></td>
+                <td><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">17</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">18</a></td>
+                <td><a href="#">19</a></td>
+                <td><a href="#">20</a></td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22</a></td>
+                <td><a href="#">23</a></td>
+                <td><a href="#">24</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">25</a></td>
+                <td><a href="#">26</a></td>
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td><a href="#">31</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

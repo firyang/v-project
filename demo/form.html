@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+form {
+	width:50em;
+	margin: 0 auto;
+}
+form div {
+	clear: left;
+}
+fieldset {
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+legend {
+	font-weight: bold;
+}
+label {
+	display: block;
+	cursor: pointer;
+	float:left;
+	width: 10em;
+}
+input {
+	width: 20em;
+	margin-bottom: 1em;
+}
+textarea {
+	width: 75%;
+	height: 10em;
+}
+input.radio, input.checkbox, input.submit {
+	width: auto;
+}
+.radio {
+	margin-right: 1em;
+}
+input[type="text"]:focus {
+	background-color: #ffc;
+}
+.required {
+	font-size: 0.75em;
+	color: #760000;
+}
+#monthOfBirthLabel, #yearOfBirthLabel {
+	text-indent: -999em;
+	width: 0;
+}
+input#dateOfBirth {
+	width: 3em;
+	margin-right: 0.5em;
+}
+select#monthOfBirth {
+	width: 10em;
+	margin-right: 0.5em;
+}
+input#yearOfBirth {
+	width: 5em;
+}
+
+fieldset#favoriteColor {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#favoriteColor h2 {
+	font-size: 1em;
+	font-weight: normal;
+	float: left;
+	width: 10em;
+}
+#favoriteColor .col {
+	width: 8em;
+	float: left;
+	clear: none;
+}
+#favoriteColor input {
+	margin-right: 0.5em;
+}
+button {
+	width: 200px;
+	height: 50px;
+	border: 1px solid #989898;
+	border-radius: 6px;
+	box-shadow: 2px 2px 2px #CCC;
+	color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #666;
+	cursor: pointer;
+	margin-left: 0.6em;
+}
+button:after {
+	content: "\00BB";
+	margin-left: 0.3em;
+}
+</style>
+</head>
+<body>
+<form>
+  <fieldset>
+    <legend>Your Contact Details</legend>
+    <div>
+      <label for="author">Name:<em class="required">(required)</em></label>
+      <input name="author" id="author" type="text" />
+    </div>
+    <div>
+      <label for="email">Email Address:</label>
+      <input name="email" id="email" type="text" />
+    </div>
+    <div>
+      <label for="url">Web Address:</label>
+      <input name="url" id="url" type="text" />
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>comments</legend>
+    <div>
+      <label for="text">Message:</label>
+      <textarea name="text" id="text" type="text" ></textarea>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Remember Me</legend>
+    <div>
+      <label>
+        <input name="remeber" id="remember-yes" type="radio" class="radio" />
+        Yes</label>
+    </div>
+    <div>
+      <label>
+        <input name="remeber" id="remember-no" type="radio" class="radio" />
+        No</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <div>
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input name="dateOfBirth" id="dateOfBirth" type="text" />
+      <label id="monthOfBirthLabel" for="monthOfBirth">Month of Birth:</label>
+      <select name="monthOfBirth" id="monthOfBirth">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+      </select>
+      <label id="yearOfBirthLabel" for="yearOfBirth">Year of Birth:</label>
+      <input name="yearOfBirth" id="yearOfBirth" type="text" value="1990" />
+    </div>
+    <fieldset id="favoriteColor">
+      <h2>Favorite Color:</h2>
+      <div class="col">
+        <div>
+          <label>
+            <input name="red" id="red" type="checkbox" class="checkbox" />Red
+          </label>
+          <label>
+            <input name="yellow" id="yellow" type="checkbox" class="checkbox" />Yellow
+          </label>
+          <label>
+            <input name="pink" id="pink" type="checkbox" class="checkbox" />Pink
+          </label>
+          <label>
+            <input name="green" id="green" type="checkbox" class="checkbox" />Green
+          </label>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <label>
+            <input name="orange" id="orange" type="checkbox" class="checkbox" />Orange
+          </label>
+          <label>
+            <input name="purple" id="purple" type="checkbox" class="checkbox" />Purple
+          </label>
+          <label>
+            <input name="blue" id="blue" type="checkbox" class="checkbox" />Blue
+          </label>
+          <label>
+            <input name="other" id="other" type="checkbox" class="checkbox" />Other
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </fieldset>
+  <div><button type="submit">Book Now</button></div>
+</form>
+</body>
+</html>
