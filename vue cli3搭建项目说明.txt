@@ -51,4 +51,5 @@
     }).$mount('#app')
   4. 指定 <router-view/>
 # 配置 axios
+
 # 配置 vuex
