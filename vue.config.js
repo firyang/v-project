@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-  publicPath: './',
+  publicPath: "./",
   // outputDir: 'dist',
   lintOnSave: false,
   // pages: {
@@ -21,34 +21,38 @@ module.exports = {
   //     filename: 'view2.html'
   //   }
   // },
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
-      .rule('images')
-      .use('url-loader')
-      .loader('url-loader')
+      .rule("images")
+      .use("url-loader")
+      .loader("url-loader")
       .options({
         limit: 10 * 1024,
-        outputPath: 'img'
-      })
+        outputPath: "img",
+      });
   },
   devServer: {
     proxy: {
-      '/toyomall': {
-        target: 'http://localhost'
+      "/toyomall": {
+        target: "http://localhost",
         // changeOrigin: true, // 允许websockets跨域
         // ws: true,
         // pathRewrite: {
         //   '^/api': ''
         // }
       },
-      '/api': {
-        target: 'http://localhost:3000',
+      "/api": {
+        target: "http://localhost:3000",
         changeOrigin: true, // 允许websockets跨域
         // ws: true,
         pathRewrite: {
-          '^/api': ''
-        }
-      }
-    } // 代理转发配置，用于调试环境
-  }
-}
+          "^/api": "",
+        },
+      },
+      "/theme-chalk/index.css": {
+        target: "http://unpkg.com/element-plus/lib",
+        changeOrigin: true,
+      },
+    }, // 代理转发配置，用于调试环境
+  },
+};
